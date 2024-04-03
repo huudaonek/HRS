@@ -66,7 +66,7 @@ namespace HRM.Controllers
             _context.Employees.Add(employee);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEmployee", new { id = employee.Id }, employee);
+            return CreatedAtAction(nameof(GetEmployees), new { id = employee.Id }, employee);
         }
 
         // DELETE: api/Employees/5
